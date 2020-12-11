@@ -1,24 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSInterviewTestStoryboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcs-JE-VuQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-C9-9vY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="470"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5d-OI-NJ4">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ei6-kM-B9J"/>
+                                                </constraints>
+                                                <state key="normal" title="Initialize AdMob"/>
+                                                <connections>
+                                                    <action selector="onInitAdMobButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="4W0-eB-L2g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be3-Fw-jL6">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Zhh-zp-JPW"/>
+                                                </constraints>
+                                                <state key="normal" title="Load AdMob Banner"/>
+                                                <connections>
+                                                    <action selector="onLoadAdMobButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="x25-Cf-Fx1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxl-Na-wxp">
+                                                <rect key="frame" x="0.0" y="100" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="z7F-en-7km"/>
+                                                </constraints>
+                                                <state key="normal" title="Show AdMob Banner"/>
+                                                <connections>
+                                                    <action selector="onShowAdMobButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZ2-Aa-VYj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNm-NM-5qx">
+                                                <rect key="frame" x="0.0" y="150" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="hm1-Yk-fIs"/>
+                                                </constraints>
+                                                <state key="normal" title="Hide AdMob Banner"/>
+                                                <connections>
+                                                    <action selector="onHideAdMobButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="1h3-LT-FXZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu3-RD-mOZ">
+                                                <rect key="frame" x="0.0" y="200" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="K6z-GY-IW4"/>
+                                                </constraints>
+                                                <state key="normal" title="Initialize MoPub"/>
+                                                <connections>
+                                                    <action selector="onInitMoPubButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="TGd-qs-TGx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gP-9S-b6I">
+                                                <rect key="frame" x="0.0" y="250" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="tdZ-bv-Szh"/>
+                                                </constraints>
+                                                <state key="normal" title="Load MoPub Interstitial"/>
+                                                <connections>
+                                                    <action selector="onLoadMoPubButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="0TN-xI-RcK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxX-AM-TcB">
+                                                <rect key="frame" x="0.0" y="300" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="JtZ-sn-2LL"/>
+                                                </constraints>
+                                                <state key="normal" title="Show MoPub Interstitial"/>
+                                                <connections>
+                                                    <action selector="onShowMoPubButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="VdT-BJ-flF"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXe-EU-fLP" userLabel="Spacer">
+                                                <rect key="frame" x="0.0" y="350" width="414" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="jp5-1Z-ZMc"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdL-2G-pAg">
+                                                <rect key="frame" x="0.0" y="380" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="EC8-S2-E83"/>
+                                                </constraints>
+                                                <state key="normal" title="maplemedia.io"/>
+                                                <connections>
+                                                    <action selector="onMapleMediaButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="JmL-9C-tMX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QY1-CS-4eH">
+                                                <rect key="frame" x="0.0" y="430" width="414" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eid-ZG-NNM"/>
+                                                </constraints>
+                                                <state key="normal" title="Notification Permission"/>
+                                                <connections>
+                                                    <action selector="onNotificationButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNL-Sk-cfo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7gi-C9-9vY" firstAttribute="leading" secondItem="Vcs-JE-VuQ" secondAttribute="leading" id="49j-F7-9mZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="7gi-C9-9vY" secondAttribute="bottom" id="9M4-iU-Wlw"/>
+                                    <constraint firstItem="7gi-C9-9vY" firstAttribute="top" secondItem="Vcs-JE-VuQ" secondAttribute="top" id="9zg-hE-yRW"/>
+                                    <constraint firstAttribute="trailing" secondItem="7gi-C9-9vY" secondAttribute="trailing" id="FAL-Nm-sIh"/>
+                                    <constraint firstItem="7gi-C9-9vY" firstAttribute="centerX" secondItem="Vcs-JE-VuQ" secondAttribute="centerX" id="bVF-2p-5sI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vcs-JE-VuQ" secondAttribute="bottom" priority="750" id="2rR-l7-Kxm"/>
+                            <constraint firstItem="Vcs-JE-VuQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HKJ-Ot-ISj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vcs-JE-VuQ" secondAttribute="trailing" id="bpc-hI-7Z0"/>
+                            <constraint firstItem="Vcs-JE-VuQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gyN-He-YVe"/>
+                            <constraint firstItem="Vcs-JE-VuQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lJV-sk-n9K"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hideAdMobButton" destination="NNm-NM-5qx" id="ERC-zU-0b5"/>
+                        <outlet property="initAdMobButton" destination="z5d-OI-NJ4" id="Zuc-Ig-1pk"/>
+                        <outlet property="initMoPubButton" destination="yu3-RD-mOZ" id="Hzz-bt-Pef"/>
+                        <outlet property="loadAdMobButton" destination="be3-Fw-jL6" id="sv3-tI-jKs"/>
+                        <outlet property="loadMoPubButton" destination="6gP-9S-b6I" id="PiM-Ww-LvA"/>
+                        <outlet property="mapleMediaButton" destination="gdL-2G-pAg" id="DtU-O7-KCW"/>
+                        <outlet property="notificationButton" destination="QY1-CS-4eH" id="4gC-az-1t8"/>
+                        <outlet property="showAdMobButton" destination="wxl-Na-wxp" id="M6e-3J-VJH"/>
+                        <outlet property="showMoPubButton" destination="AxX-AM-TcB" id="oUm-ji-VQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

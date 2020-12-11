@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import GoogleMobileAds
+import MoPub
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // AdMob
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        // MoPub
+        let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: "4f117153f5c24fa6a3a92b818a5eb630")
+                sdkConfig.loggingLevel = .info
+                MoPub.sharedInstance().initializeSdk(with: sdkConfig, completion: nil)
+        
         return true
     }
 
